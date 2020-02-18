@@ -1,0 +1,11 @@
+<script>
+    var numeros = [], insere = "s", i;
+    while(insere == "s"){
+        numeros.push(parseInt(prompt("Insira um número: ")));
+        i++;
+        insere = prompt("Inserir número na lista? s/n");
+    }
+    document.write(numeros.sort(function ordenar(a, b){
+        return a > b
+    }));
+</script>

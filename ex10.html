@@ -1,0 +1,16 @@
+<script>
+    var n1, n2, media, resultado;
+    n1 = parseFloat(prompt("Informe a primeira nota: "));
+    n2 = parseFloat(prompt("Informe a segunda nota: "));
+    media = ((n1 + n2) / 2).toFixed(1);
+    if(media<=5){
+        resultado = "reprovado";
+    }
+    else if(media < 7){
+        resultado = "exame"
+    }
+    else{
+        resultado = "aprovado"
+    }
+    alert(`Média: ${media} \nResuldado: ${resultado}`)
+</script>

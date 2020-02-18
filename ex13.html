@@ -1,0 +1,15 @@
+<script>
+    var n1, n2, n3;
+    n1 = parseInt(prompt("Informe o primeiro número: "));
+    n2 = parseInt(prompt("Informe o segundo número, diferente do anterior: "));
+    n3 = parseInt(prompt("Informe o terceiro número, diferente dos anteriores: "));
+    if(n1==n2 || n2==n3 || n3==n2){
+        alert("ERRO! Dois ou mais números informados são iguais")
+    }else if(n1>n2 && n1>n3){
+        alert(`O maior número entre os digitados é ${n1}`);
+    }else if(n2>n3 && n2>n1){
+        alert(`O maior número entre os digitados é ${n2}`);
+    }else{
+        alert(`O maior número entre os digitados é ${n3}`);
+    }
+</script>

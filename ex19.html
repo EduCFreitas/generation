@@ -1,0 +1,20 @@
+<script>
+    var cont = 1, qtd, soma = 0.0, salario, media = 0.0;
+    qtd = parseInt(prompt("Informe a quantidade de salários a serem calculados: "));
+    if(isNaN(qtd)){
+        qtd = 0;
+    }
+    while(cont<=qtd){
+        salario = parseFloat(prompt(`Informe o valor do ${cont}° salário: R$`));
+        if(isNaN(salario)){
+            salario = 0;
+        }
+        soma += salario
+		cont++
+    }
+    media = soma / (cont-1)
+    if(isNaN(media)){
+            media = 0;
+        }
+    alert(`A soma dos ${cont-1} salários é de R$${soma} e sua média é R$${media}`);
+</script>

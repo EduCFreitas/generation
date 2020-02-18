@@ -1,0 +1,14 @@
+<script>
+    var numeros = [];
+    for(var i = 0; i<=4; i++){
+        numeros.push(parseInt(prompt(`Insira o ${i+1}° número: `)));
+        if(isNaN(numeros[i])){
+            numeros[i] = 0;
+        }
+        document.write(`${numeros[i]}  `);
+    };
+    document.write("<br>")
+    for(var i = 4; i>=0; i--){
+        document.write(`${numeros[i]}  `);
+    };
+</script>

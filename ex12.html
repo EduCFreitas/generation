@@ -1,0 +1,12 @@
+<script>
+    var n1, n2;
+    n1 = parseInt(prompt("Informe o primeiro número: "));
+    n2 = parseInt(prompt("Informe um número diferente do anterior: "));
+    if(n1 < n2){
+        alert(`A ordem crescente é ${n1}, ${n2}`);
+    }else if(n2 < n1){
+        alert(`A ordem crescente é ${n2}, ${n1}`);
+    }else{
+        alert("ERRO! Os dois números informados são iguais!");
+    }
+</script>

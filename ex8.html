@@ -1,0 +1,12 @@
+<script>
+    var nome, condicao, salario;
+    nome = prompt("Informe o nome: ");
+    salario = parseFloat(prompt("Informe o salário: "));
+    if(salario>4000){
+        condicao = "mais de R$4000,00";
+    }
+    else{
+        condicao = "menos ou R$4000,00";
+    }
+    console.log(`${nome}, você ganha ${condicao}.`)
+</script>

@@ -1,0 +1,15 @@
+<script>
+  var numeros = [];
+  numeros.push(parseInt(prompt("Insira o primeiro número: ")));
+  numeros.push(parseInt(prompt("Insira o segundo número: ")));
+  numeros.push(parseInt(prompt("Insira o terceiro número: ")));
+  if(numeros[0]==numeros[1]==numeros[2]){
+      document.write("Os três números informados são iguais!");
+  }else if(numeros[0]>numeros[1] && numeros[0]>numeros[2]){
+      document.write(`O maior número é ${numeros[0]}`);
+  }else if(numeros[1]>numeros[2] && numeros[1]>numeros[0]){
+    document.write(`O maior número é ${numeros[1]}`);
+  }else{
+    document.write(`O maior número é ${numeros[2]}`);
+  }
+</script>

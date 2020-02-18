@@ -1,0 +1,13 @@
+<script>
+    var numeros = [], soma, subt, mult, divi;
+    numeros.push(parseFloat(prompt("Informe o primeiro número: ")));
+    numeros.push(parseFloat(prompt("Informe o segundo número: ")));
+    soma = numeros[0]+numeros[1];
+    subt = numeros[0]-numeros[1];
+    mult = numeros[0]*numeros[1];
+    divi = numeros[0]/numeros[1];
+    document.write(`${numeros[0]} + ${numeros[1]} = ${soma} <br>`);
+    document.write(`${numeros[0]} - ${numeros[1]} = ${subt} <br>`);
+    document.write(`${numeros[0]} * ${numeros[1]} = ${mult} <br>`);
+    document.write(`${numeros[0]} / ${numeros[1]} = ${divi}`);
+</script>
