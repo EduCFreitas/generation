@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+    color: rgb(32, 43, 187);
+}
+
+textarea{
+    resize: none;
+}
+
+#caixa-formulario{
+    background-image: url(/assets/imagens/audi_rs4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 450px;
+    margin: 0 auto;
+    padding: 5px;
+    border: 3px solid black;
+    border-radius: 10px;
+}
