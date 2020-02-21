@@ -1,17 +1,21 @@
 <script>
     var a=[], somap=0, somas=0;
     // i -> Linha / j -> Coluna
+    var a=[];
+    // i -> Linha / j -> Coluna
     for(var i=0; i<=2; i++){
-        for(var j=0; j<3; j++){
+        for(var j=0; j<=2; j++){
             a[i,j]=parseInt(prompt(`Digite um número: `));
             document.write(`${a[i,j]} | `);
-            if(j=3){
-                document.write('<br>');
-            }
-            if(i=j){
+            if(i==j){
                 somap+=a[i,j];
             }
+            if(i==0&&j==2 || i==1&&j==1 || i==2&&j==0){
+                somas+=a[i,j];
+            }
         }
+        document.write('<br>');
     }
-    // document.write(`Soma da diagonal principal: ${somap}`);
+    document.write(`Soma da coluna principal: ${somap}<br>Soma da coluna secundária: ${somas}`);
+
 </script>
