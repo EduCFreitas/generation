@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex1 - Bootstrap</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .card-text{
+            text-align: justify;
+        }
+        
+        .jumbotron{
+            background-color: rgb(197, 215, 255);
+        }
+
+        /* Media Queries */
+        @media (min-width: 500px){
+            .carousel{
+                width: 50%;
+                margin: 0 auto;
+            }
+
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- Nav -->
+        <nav>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Active</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Button -->
+        <button>Clique aqui!</button>
+        <br><br>
+        <button class="btn btn-primary btn-block">Clique aqui!</button>
+        <br><br>
+        <button class="btn btn-outline-primary btn-lg">Clique aqui!</button>
+        <br><br>
+        <button class="btn btn-outline-primary btn-sm">Clique aqui!</button>
+        <br></br>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-secondary active">
+                <input type="radio" name="options" id="option1"> Outros
+            </label>
+            <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option2" checked> Feminino
+            </label>
+            <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option3"> Masculino
+            </label>
+        </div>
+        <br><br>
+        <!-- Card -->
+        <div class="card" style="width: 18rem;">
+            <img src="assets/img/audi_rs4.jpg" class="card-img-top" alt="Imagem de um Audi RS4 Avant">
+            <div class="card-body">
+                <h5 class="card-title">Audi RS4 Avant</h5>
+                <p class="card-text">Perua esportiva Audi RS4 Avant tem motor V6 2.9 biturbo que rende 450 cv, acelera de 0 a 100 km/h em 4,1 segundos e chega aos 280 km/h.</p>
+                <a href="https://www.netcarshow.com/audi/2018-rs4_avant/" class="btn btn-primary" target="_blank">Veja mais</a>
+            </div>
+        </div>
+        <br><br>
+        <!-- Carousel -->
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-interval="5000">
+                    <img src="assets/img/panamera.jpg" class="d-block w-100" alt="Porsche Panamera Sport Turismo">
+                </div>
+                <div class="carousel-item" data-interval="5000">
+                    <img src="assets/img/rs6.jpg" class="d-block w-100" alt="Audi RS6 Avant">
+                </div>
+                <div class="carousel-item" data-interval="5000">
+                    <img src="assets/img/v90.jpg" class="d-block w-100" alt="Volvo V90">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <br><br>
+        <!-- Formulários -->
+        <form method="POST">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" required autofocus>
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" name="senha" required>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1" name="check" required>
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <br><br>
+        <!-- Jumbotron -->
+        <div class="jumbotron">
+            <h1 class="display-4">Hello, world!</h1>
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+            <hr class="my-4">
+            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </div>
+        <br><br>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Fluid jumbotron</h1>
+                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
