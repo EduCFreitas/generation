@@ -1,3 +1,16 @@
 <script>
-    var n, qtd_div, list_divs=[], soma_divs, primo;
+    var n, div_pos=[], soma_div=0, primo="Não primo";
+    n = parseInt(prompt("Informe um número inteiro: "));
+    for(var i=1; i<=n; i++){
+        if((n%i)==0){
+            div_pos.push(i);
+            soma_div+=i;
+        }
+    }
+    if(n>1 && div_pos.length==2){
+        primo="Primo";
+    }
+    document.write(`${div_pos.length} divisor(es): ${div_pos}<br>`);
+    document.write(`Soma de divisores = ${soma_div}<br>`);
+    document.write(primo);
 </script>
