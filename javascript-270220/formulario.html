@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/estilo-formulario.css">
+    <title>Formulário</title>
+</head>
+<body>
+    
+    <h1>Formulário</h1>
+    <br><br>
+    <section id="caixa-formulario">
+        <form action="#" method="POST">
+            <label for="">Nome:</label>
+            <input type="text" name="nome" id="nome" maxlength="20" size="50" placeholder="Digite seu nome:" required>
+            <br><br>
+            <label for="">Idade:</label>
+            <input type="number" name="idade" id="idade" min="18" max="29">
+            <br><br>
+            <label for="">Nascimento:</label>
+            <input type="date" name="nascimento" id="nascimento">
+            <br><br>
+            <label for="">Observação:</label>
+            <textarea name="observacao" id="observacao" cols="20" rows="4" maxlength="80"></textarea>
+            <br><br>
+            <label for="">Estados:</label>
+            <select name="estados" id="estados">
+                <option value="" disabled selected>Selecione o estado</option>
+                <option value="SP">São Paulo</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RS">Rio Grande do Sul</option>
+            </select>
+            <br><br>
+            <label for="">Senha:</label>
+            <input type="password" name="senha" id="senha">
+            <br><br>
+            <label for="">Sexo:</label>
+            <input type="radio" name="sexo" value="F">
+            <label for="f">Feminino</label>
+            <input type="radio" name="sexo" value="M">
+            <label for="m">Masculino</label>
+            <br><br>
+            <input type="checkbox" name="almoco" id="almoco" value="sim">
+            <label for="">Almoço:</label>
+            <input type="checkbox" name="vtransporte" id="vtransporte" value="sim">
+            <label for="">Vale transporte:</label>
+            <br><br>
+            <input type="submit" value="Enviar" onclick="mostrar()">
+            <input type="reset" value="Limpar Campos">
+        </form>
+    </section>
+
+    <script src="assets/js/formulario.js"></script>
+</body>
+</html>
