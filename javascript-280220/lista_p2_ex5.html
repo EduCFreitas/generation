@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex5 JS - Lista Parte 2 - Tornar Primeiras Letras em Maiúsculas</title>
+</head>
+<body>
+    <script>
+        function tornarMaiusculo(texto){
+            var vetor = texto.split(" "); // Transforma string em vetor
+            var resultado = ""
+            for(var i=0; i<vetor.length; i++){
+                // replace(valor_atual, novo_valor)
+                // slice: retira a cadeia de caracteres de acordo com a posição mencionada nos parênteses
+                // slice(a_partir_de_onde, até_o_ponto_de_parada)
+                vetor[i] = vetor[i].replace(vetor[i].slice(0,1), vetor[i].slice(0,1).toUpperCase());
+                resultado = resultado+" "+vetor[i];
+            }
+            return resultado;
+        }
+        console.log(tornarMaiusculo());
+    </script>
+    
+</body>
+</html>

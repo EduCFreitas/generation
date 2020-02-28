@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex6 JS - Lista Parte 2 - Encontrar Maior Palavra da String</title>
+</head>
+<body>
+    <script>
+        function encontrarMaior(string){
+            var vetor = string.split(" ");
+            var maior = ""
+            for(var i=0; i<vetor.length; i++){
+                if(vetor[i].length>maior.length){
+                   maior = vetor[i]
+                }
+            }
+            return maior;
+        }
+        console.log(encontrarMaior());
+    </script>
+</body>
+</html>

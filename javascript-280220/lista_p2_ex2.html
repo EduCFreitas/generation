@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex2 JS - Lista Parte 2 - Verificador de Palíndromo</title>
+</head>
+<body>
+    <script>
+        function ehPalindromo(string){
+            string = string.toLowerCase();
+            string = string.split(" ").join("");
+            string = string.split("").join("");
+            inversa = string.split("").reverse().join(""); 
+            if(string==inversa){
+                return "É palíndromo";
+            }else{
+                return "Não é palíndromo";
+            }
+        }
+        console.log(ehPalindromo());
+    </script>
+</body>
+</html>
