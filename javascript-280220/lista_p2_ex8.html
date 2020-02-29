@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex8 JS - Lista Parte 2 - Números Primos</title>
+</head>
+<body>
+    <script>
+        function ehPrimo(n){
+            var divisores=[];
+            for(var i=0; i<=n; i++){
+                if(n%i==0){
+                    divisores.push(i);
+                }
+            }
+            if((n>1) && (divisores.length==2)){
+                    return "É um número primo"
+                }else{
+                    return "Não é um número primo"
+                }
+        }
+        console.log(ehPrimo());
+    </script>
+</body>
+</html>
