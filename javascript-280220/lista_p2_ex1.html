@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex1 JS - Lista Parte 2 - Invertendo um Número</title>
+</head>
+<body>
+    <script>
+        function inverterNumero(n){
+            n = n+"";
+            // split: retira caracteres que estão entre as aspas e retorna um array
+            // reverse: inverte o array
+            // join: transforma array em string
+            return n.split("").reverse().join("");
+        }
+        console.log(inverterNumero());
+    </script>
+</body>
+</html>
