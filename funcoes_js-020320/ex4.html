@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão de Temperatura</title>
+</head>
+<body>
+    <script>
+        function converteFahrenheit(celsius){
+            var fahrenheit = celsius*9/5+32;
+            return fahrenheit
+        }
+        var temperatura = parseInt(prompt("Informe a temperatura em °C a ser transformada em °F:"));
+        var valorConvertido=converteFahrenheit(temperatura);
+        alert(`A temperatura convertida é ${valorConvertido}°F`);
+    </script>
+</body>
+</html>

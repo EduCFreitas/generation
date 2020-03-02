@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções - JS</title>
+</head>
+<body>
+    <script>
+        // Parte 1
+        function minhaFuncao(a, b) {
+            console.log(a * b);              
+        }
+        minhaFuncao(2, 3);
+        minhaFuncao(5, 6);
+        
+        function mostraNomeIdade(nome, idade){
+            console.log(`A pessoa ${nome} tem ${idade} anos de idade.`)
+        }
+        var nome = prompt("Informe seu nome: ");
+        var idade = parseInt(prompt("Informe sua idade: "))
+        mostraNomeIdade(nome, idade)
+        
+        // Parte 2
+        function menorValor(a, b, c) {
+            if(a>b&&c>b){
+                return b;
+            }else if(b>c&&a>c){
+                return c
+            }
+            else return a;
+        }
+        var a = parseInt(prompt("Informe um número"))
+        var b = parseInt(prompt("Informe um número"))
+        var c = parseInt(prompt("Informe um número"))
+        var menor = menorValor(a,b,c);
+        console.log(`Menor valor: ${menor}`);
+    
+        // Parte 3
+    
+        // Parte 4
+        function concatenaString(){
+            var repete="s"
+            var resultado = ""
+            while(repete=="s"){
+                var string = prompt("Digite algo")
+                resultado += string
+                repete = prompt("Deseja concatenar mais alguma palavra? \nSim='s'; Não='n'")
+            }
+            return `A string concatenada é: ${resultado}`
+        }
+        alert(concatenaString())
+        
+        
+    </script>
+</body>
+</html>
