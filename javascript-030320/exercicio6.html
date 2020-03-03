@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar e Remover Itens Através de Funções JS</title>
+</head>
+<body>
+    <ol id="grupo">
+    </ol>
+    <button id="adicionar" onclick="adicionar()" title="Mensagem de instrução" autofocus>Adicionar</button>
+    <button id="remover" onclick="remover()">Remover</button>
+    <br>
+    <button id="removerTodos" onclick="removerTudo()">Remover Tudo</button>
+
+    <script>
+        var i = 0;
+        function adicionar(){
+            i++
+            var texto = prompt("Digite um produto:");
+            var ol = document.getElementById("grupo");
+            var li = document.createElement("li");
+            li.className="item"
+            li.id = "item"+i;
+            li.appendChild(document.createTextNode(texto));
+            ol.appendChild(li);
+        }
+
+        function remover(){
+            var ol = document.getElementById("grupo");
+            var li = document.getElementById("item"+i)
+            ol.removeChild(li)
+            i--
+        }
+
+        function removerTudo(){
+            var ol = document.getElementById("grupo");
+            ol.innerHTML="";
+            ol.length = 0;
+            i=0;
+        }
+    </script>
+</body>
+</html>
