@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex14 JS - Lista Parte 2 - Converter Em Quantidade de Moedas</title>
+</head>
+<body>
+    <script>
+        function converteMoedas(valor, moedas){
+            var resto = 0;
+            if(valor===0){
+                return []
+            }else if(valor>=moedas[0]){
+                resto = (valor-moedas[0]);
+                return [moedas[0]].concat(converteMoedas(resto, moedas))
+            }else{
+                moedas.shift();
+                return converteMoedas(valor, moedas)
+            }
+        }
+        console.log(converteMoedas(46, [25, 10, 5, 2,1]));
+    </script>
+</body>
+</html>

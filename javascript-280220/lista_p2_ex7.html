@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex7 JS - Lista Parte 2 - Contagem de Vogais na String</title>
+</head>
+<body>
+    <script>
+        function contaVogais(string){
+            string = string.toLowerCase();
+            var qtdVogais = 0;
+            var vogais = ["a", "e", "i", "o", "u"];
+            for(var i=0; i<string.length; i++){
+                if(vogais.indexOf(string[i]) != -1){
+                    qtdVogais++
+                }
+            }
+
+            return qtdVogais
+        }
+        console.log(contaVogais());
+    </script>
+</body>
+</html>

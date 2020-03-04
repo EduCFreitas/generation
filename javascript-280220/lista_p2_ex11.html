@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex11 JS - Lista Parte 2 - Segundo Maior e Menor Número</title>
+</head>
+<body>
+    <script>
+        function encontrarSegundo(entrada){
+            var n = [];
+            n = entrada.sort(function(x,y){
+                return x-y
+            });
+            if(n.length>1){
+                return `Segundo maior número: ${n[n.length-2]} \n Segundo menor número: ${n[1]}`
+            }else{
+                return `Impossível calcular, vetor com menos de 2 números`
+            }
+        }
+        console.log(encontrarSegundo())
+    </script>
+</body>
+</html>
