@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="nome">
+    <input type="button" value="Clique aqui" id="botao">
+    
+    <script>
+        try{
+            // function() - Função anônima (sem nome)
+            var nome;
+            document.getElementById("botao").addEventListener("click", function(){
+                nome = document.getElementById("nome").value;
+                alert(nome);
+            })
+            debugger // Comando que manca o brakpoint no console
+            document.getElementById("botao").addEventListener("mouseover", function(){
+                document.getElementById("nome").style.color="red"
+            })
+            document.getElementById("botao").addEventListener("mouseout", function(){
+                document.getElementById("nome").style.color="black"
+            })
+        }
+        catch(erro){
+            alert(erro)
+        }
+    </script>
+</body>
+</html>

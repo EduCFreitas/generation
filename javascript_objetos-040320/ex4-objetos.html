@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho com Objetos</title>
+</head>
+<body>
+    <script>
+        try{
+            // Criando o nosso modelo
+            // Cria o método construtor -> Constrói o modelo
+            // Modelo: Conjunto de atributos (características) e métodos (ações)
+            // Todo modelo começa com letra maiúscula
+            
+            // Início do método construtor
+            function MinhaCaneta(_cor, _tipo, _tamanho, _temTinta, _material, _espessuraPonta, _tampado){
+                // Atributos -----------------------
+                this.cor=_cor.toLowerCase();
+                this.tipo=_tipo.toLowerCase();
+                this.tamanho=_tamanho.toLowerCase();
+                this.temTinta=_temTinta.toLowerCase()||"sim";
+                this.material=_material.toLowerCase();
+                this.espessuraPonta=_espessuraPonta.toLowerCase();
+                this.tampado=_tampado.toLowerCase()||"sim"
+                // Fim dos atributos ---------------
+            }
+            // Fim do método construtor
+            
+            // Início do método abrir()
+            MinhaCaneta.prototype.abrir = function(){
+                if(this.tampado=="sim"){
+                    this.tampado="não";
+                    alert("Caneta destampada com sucesso!")
+                }else{
+                    alert("Impossível destampar a caneta! Ela já está aberta!")
+                }
+            }
+            // Fim do método abrir()
+            
+            // Início do método fechar()
+            MinhaCaneta.prototype.fechar = function(){
+                if(this.tampado=="sim"){
+                    alert("Impossível tampar a caneta! Ela já está tampada!");
+                }else{
+                    this.tampado="sim";
+                    alert("Caneta tampada com sucesso!")
+                }
+            }
+            // Fim do método fechar()
+            
+            // Instanciar = cópia do objeto
+            caneta1=new MinhaCaneta("AZUL", "hidrográfica", "10cm", "", "plástico", "2mm", "") 
+            caneta2=new MinhaCaneta("azul", "esferográfica", "15cm", "", "plástico", "0.5mm", "")
+            
+            // Comparando cores dos 2 objetos caneta
+            if(caneta1.cor==caneta2.cor){
+                // alert("As cores são iguais")
+            }else{
+                // alert("As cores são diferentes")
+            }
+            debugger
+            // Imprimindo a cor da caneta
+            alert(`Cor: ${caneta1.cor}\nTipo: ${caneta1.tipo}\nTamanho: ${caneta1.tamanho}\nTem tinta? ${caneta1.temTinta}\nMaterial: ${caneta1.material}\nEspessura da ponta: ${caneta1.espessuraPonta}\nTampado? ${caneta1.tampado}`)
+            
+            // Utilizando o método abrir() com o objeto caneta2
+            caneta1.abrir();
+            caneta1.abrir();
+            caneta1.fechar();
+            caneta1.fechar();
+        }
+        catch(erro){
+            alert(`O programa não está funcionando. Motivo: ${erro}`)
+        }
+    </script>
+</body>
+</html>
+
+
+
