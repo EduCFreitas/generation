@@ -7,56 +7,64 @@
 </head>
 <body>
     <script>
-        // Criação do construtor
-        function MeuCarro(_marca, _anoFabricacao, _velMax, _velAtual){
-            this.marca=_marca
-            this.anoFabricacao=_anoFabricacao;
-            this.velMax=_velMax;
-            this.velAtual=parseInt(_velAtual)||0;
-        }
-
-        // Método acelerar
-        MeuCarro.prototype.acelerar = function(){
-            if(this.velAtual<this.velMax){
-                this.velAtual++;
-                console.log(`Acelerando. A velocidade atual do carro ${this.marca} é de ${this.velAtual}km/h.`)
-            }else{
-                console.log(`O carro de marca ${this.marca} já está na velocidade máxima de ${this.velMax}km/h`)
+        try{
+            // Método construtor
+            function MeuCarro(_marca, _anoFabricacao, _velMax, _velAtual){
+                this.marca=_marca
+                this.anoFabricacao=_anoFabricacao;
+                this.velMax=_velMax;
+                this.velAtual=parseInt(_velAtual)||0;
             }
-        }
-
-        // Método desacelerar
-        MeuCarro.prototype.desacelerar = function(){
-            if(this.velAtual>0){
-                this.velAtual--;
-                console.log(`Desacelerando. A velocidade atual do carro ${this.marca} é de ${this.velAtual}km/h`)
-            }else{
-                console.log(`O carro ${this.marca} chegou à imobilidade`);
+            
+            // Método acelerar
+            MeuCarro.prototype.acelerar = function(){
+                for(var i=this.velAtual; i<=this.velMax; i++){
+                    if(this.velAtual<this.velMax){
+                        this.velAtual++;
+                        console.log(`Acelerando. A velocidade atual do carro ${this.marca} é de ${this.velAtual}km/h.`)
+                    }else{
+                        console.log(`O carro de marca ${this.marca} já está na velocidade máxima de ${this.velMax}km/h`)
+                    }
+                }
             }
-        }
-
-        // Instanciando:
-        carro1=new MeuCarro("Toyota", 2006, 186, 120);
-        carro2=new MeuCarro("Chevrolet", 2020, 300, 280);
-        carro3=new MeuCarro("Dodge", 2018, 280, "");
-
-        for(var i=0; i<70; i++){
-            carro1.acelerar();
-        }
-        for(var i=0; i<100; i++){
-            carro1.desacelerar();
-        }
-        for(var i=0; i<60; i++){
-            carro2.acelerar();
-        }
-        for(var i=0; i<300; i++){
-            carro2.desacelerar();
-        }
-        for(var i=0; i<300; i++){
-            carro3.acelerar();
-        }
-        for(var i=0; i<300; i++){
-            carro3.desacelerar();
+            
+            // Método desacelerar
+            MeuCarro.prototype.desacelerar = function(){
+                for(var i=this.velAtual; i>=0; i--){
+                    if(this.velAtual>0){
+                        this.velAtual--;
+                        console.log(`Desacelerando. A velocidade atual do carro ${this.marca} é de ${this.velAtual}km/h`)
+                    }else{
+                        console.log(`O carro ${this.marca} chegou à imobilidade`);
+                    }
+                }
+            }
+            
+            // Instanciando:
+            carro1=new MeuCarro("Toyota", 2006, 186, 120);
+            carro2=new MeuCarro("Chevrolet", 2020, 300, 280);
+            carro3=new MeuCarro("Dodge", 2018, 280, "");
+            
+            // for(var i=0; i<70; i++){
+                carro1.acelerar();
+            // }
+            // for(var i=0; i<100; i++){
+                carro1.desacelerar();
+            // }
+            // for(var i=0; i<60; i++){
+                carro2.acelerar();
+            // }
+            // for(var i=0; i<300; i++){
+                carro2.desacelerar();
+            // }
+            // for(var i=0; i<300; i++){
+                carro3.acelerar();
+            // }
+            // for(var i=0; i<300; i++){
+                carro3.desacelerar();
+            // }
+        }catch(e){
+            alert(`Programa não está rodando. Erro: ${e}`)
         }
     </script>
 </body>
