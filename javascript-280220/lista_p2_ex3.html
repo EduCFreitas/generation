@@ -7,16 +7,19 @@
 </head>
 <body>
     <script>
-        function gerarCombinacoes(string){
-            array = string.split("")
-            for(var a=0; a<array.length; a++){
-                for(var b=0; b<array.length; b++){
+        var palavra = 'dog';
+        var vetor = palavra.split('');
+        var resultado = ''
+        for(var i=0; i<vetor.length; i++){
+            for(var j=0; j<vetor.length; j++){
+                for(var k=0; k<vetor.length; k++){
+                    if(i!=j && i!=k && j!=k){
+                        resultado = vetor[i]+vetor[j]+vetor[k]
+                        console.log(resultado);
+                    }
                 }
             }
-            // console.log(array[a])
-            return
         }
-        console.log(gerarCombinacoes());
     </script>
 </body>
 </html>
