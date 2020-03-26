@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão JS 3</title>
+</head>
+<body>
+    <script>
+        var HT = parseFloat(prompt("Informe a quantidade de horas trabalhadas:"));
+        var VH = parseFloat(prompt("Informe o valor da hora trabalhada:"));
+        var PD = parseFloat(prompt("Informe o percentual de desconto:"));
+        var SB = calculaSalarioBruto(HT, VH);
+        var TD = calculaTotalDescontos(PD, SB);
+        var SL = calculaSalarioLiquido(SB, TD);
+        function calculaSalarioBruto(horasTrabalhadas, valorHora){
+            return horasTrabalhadas*valorHora;
+        }
+        function calculaTotalDescontos(percentualDesconto, salarioBruto){
+            return (percentualDesconto/100)*salarioBruto;
+        }
+        function calculaSalarioLiquido(salarioBruto, totalDescontos){
+            return salarioBruto-totalDescontos;
+        }
+        console.log(`Salário bruto: ${SB}\nTotal de descontos: ${TD}\nSalário líquido: ${SL}`);
+    </script>
+</body>
+</html>

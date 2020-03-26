@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão JS 7</title>
+</head>
+<body>
+    <script>
+        function CalculaDiasVividos(diaNasc, mesNasc, anoNasc){
+            var diaNasc = parseInt(diaNasc);
+            var mesNasc = parseInt(mesNasc);
+            var anoNasc = parseInt(anoNasc);
+            var agora = new Date;
+            var diaAtual = agora.getDate();
+            var mesAtual = agora.getMonth()+1;
+            var anoAtual = agora.getFullYear();
+            var diasVividos = (anoAtual-anoNasc)*12*30 + (mesAtual-mesNasc)*30 + (diaAtual-diaNasc);
+            console.log(`Você viveu ${diasVividos} dias`);
+        }
+    </script>
+</body>
+</html>

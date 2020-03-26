@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão JS 5</title>
+</head>
+<body>
+    <script>
+        function calculaQtdLitrosCombustivel(tempoMinutos, velMedia){
+            var consumo = 12;
+            var tempoMinutos = parseFloat(tempoMinutos)
+            var tempoHoras = tempoMinutos/60;
+            var velMedia = parseFloat(velMedia);
+            var distancia = tempoHoras*velMedia;
+            var qtdCombustivel = distancia/consumo;
+            console.log(`O automóvel gastou ${qtdCombustivel} litros de combustível durante a viagem`)
+        }
+    </script>
+</body>
+</html>

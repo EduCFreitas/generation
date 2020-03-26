@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão JS 9</title>
+</head>
+<body>
+    <script>
+        function calculaContaClienteHotel(nome, qtdDiarias){
+            var valorDiaria = 50;
+            var taxaServicos = 0;
+            var valorConta = 0;
+            if(qtdDiarias<15){
+                taxaServicos = 4;
+            }else if(qtdDiarias>15){
+                taxaServicos = 3;
+            }else{
+                taxaServicos = 3.6;
+            }
+            valorConta = parseInt((qtdDiarias*(valorDiaria+taxaServicos)).toFixed(2));
+            console.log(`A conta do cliente ${nome} é de R$${valorConta.toFixed(2)}`);
+            return valorConta;
+        }
+        function calculaTotalGanhoHotel(){
+            var totalGanhoHotel = 0;
+            for(var i=1; i<=30; i++){
+                var nomeCliente = prompt(`Informe o nome do cliente do quarto ${i}:`);
+                var diariasCliente = parseInt(prompt(`Informe a quantidade de diárias que o cliente ${nomeCliente} utilizou o quarto ${i}:`));
+                totalGanhoHotel += calculaContaClienteHotel(nomeCliente, diariasCliente);
+            }
+            console.log(`O total ganho pelo hotel foi de R$${totalGanhoHotel.toFixed(2)}`);
+        }
+        calculaTotalGanhoHotel();
+    </script>
+</body>
+</html>
